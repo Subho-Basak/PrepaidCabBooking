@@ -1,0 +1,1445 @@
+@CHARSET "ISO-8859-1";
+
+
+* {
+	font-family: century gothic light;
+}
+
+.logo{
+	position:absolute;
+	top:0;
+	left:0;
+	width:300px;
+	height:100px;
+	z-index:2;
+}
+.header1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: #222;
+}
+
+.header1 a {
+	color: #d8d8d8;
+	text-decoration: none;
+	padding-left:25px;
+	padding-right: 30px;
+	margin-right: 20px;
+	margin-left:-10px;
+	margin-top:17px;
+	border-right:1px solid white;
+	float: right;
+	font-size: 12px;
+}
+
+.header2 {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.header2 a {
+	color: black;
+	text-decoration: none;
+	padding-top: 15px;
+	margin-right: 50px;
+	float: right;
+	font-size: 14px;
+	transition:color 0.3s ease-in-out;
+}
+
+.header2 a:hover{
+	color:#5695e0;
+}
+#ajSlider img {
+	position: absolute;
+	left: 0;
+	top: 50px;
+	z-index: -1;
+	image-rendering:inherit;
+}
+
+.shroud {
+	position: absolute;
+	left: 0;
+	top: 50px;
+	width: 100%;
+	height: 667px;
+	background: rgba(50, 50, 50, 0.4);
+	z-index: -1;
+}
+
+#slider-wrapper {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	max-height: 600px;
+	height: 100%;
+	z-index:-1;
+}
+
+#ajSlider {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+	max-width: 1348px;
+	width: 100%;
+	height: 600px;
+	margin: 0 auto;
+}
+
+
+#button-previous {
+	position: absolute;
+	top: 380px;
+	left: 10px;
+	outline: none;
+	width: 30px;
+	background: white;
+	height: 30px;
+	border: none;
+	cursor: pointer; border-radius : 50px 50px 50px 50px;
+	z-index: 1;
+	border-radius: 50px 50px 50px 50px;
+}
+
+#button-next {
+	position: absolute;
+	top: 380px;
+	right: 14px;
+	outline: none;
+	background: white;
+	width: 30px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
+	border-radius: 50px 50px 50px 50px;
+	z-index: 1;
+}
+.register{
+	position:absolute;
+	top:380px;
+	left:400px;
+	width:280px;
+	height:50px;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	background:#67a925;
+	color:white;
+	transition:all 0.3s ease-in-out;
+}
+
+.register:hover{
+	background:#4a7a1b;
+}
+.logPanel{
+	position:absolute;
+	top:200px;
+	left:100px;
+	width:250px;
+	height:400px;
+	background:rgba(50,50,50,0.7);
+	overflow:hidden;
+}
+
+.logPanel span{
+	margin-top:-30px;
+	padding:15px 67px;
+	background:rgba(150,150,150,0.7);
+	font-family:segoe ui light;
+	line-height:35px;
+}
+.logPanel label{
+	margin:20px;
+	font-size:15px;
+	color:#5695e0;
+}
+.logPanel input{
+	width:200px;
+	margin:20px;
+	outline:none;
+	border:none;
+	background:rgba(150,150,150,0.5);
+	padding:4px;
+}
+#login{
+	width:200px;
+	margin:10px 20px;
+	outline:none;
+	border:none;
+	background:#ddd;
+	padding:10px;
+	cursor:pointer;
+	transition:background 0.3s ease-in-out;
+}
+
+#login:hover{
+	background:#aaa;
+}
+.logPanel a{
+	margin:20px;
+	text-decoration:none;
+	color:#ddd;
+	font-size:12px;
+}
+
+.service{
+	position:absolute;
+	top:750px;
+	left:0;
+	width:100%;
+	height:600px;
+}
+.service h1,.gallery h1,.achievement h1,.contact h1{
+	color:#555;
+	font-weight:normal;
+	margin:50px 100px;
+}
+
+.service hr,.gallery hr{
+	position:absolute;
+	left:350px;
+	top:60px;
+	width:66%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+
+.service li{
+	display:inline-block;
+	margin:10px;
+}
+
+.service li a{
+
+	text-decoration:none;
+	color:white;
+	font-size:18px;
+}
+.gallery{
+	position:absolute;
+	top:1300px;
+	left:0;
+	width:100%;
+	height:600px;
+
+}
+
+.achievement{
+	position:absolute;
+	top:2000px;
+	left:0;
+	width:100%;
+	height:600px;
+
+}
+.achievement hr{
+	position:absolute;
+	left:520px;
+	top:60px;
+	width:54%;
+	border:none;
+	height:1px;
+	background:#ccc;
+	
+}
+
+.achievement ul{
+	position:absolute;
+	left:100px;
+	top:400px;
+	list-style:none;
+}
+.achievement li{
+	color:#5695e0;
+	display:inline;
+	}
+.achievement li:nth-child(1){margin-left:120px;}
+.achievement li:nth-child(2){margin-left:120px;}
+.achievement li:nth-child(3){margin-left:110px;}
+.achievement li:nth-child(4){margin-left:120px;}
+
+.contact{
+	position:absolute;
+	top:2750px;
+	left:0;
+	width:100%;
+	height:1000px;
+}
+.contact hr{
+	position:absolute;
+	left:440px;
+	top:60px;
+	width:60%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+
+.contact div{
+	margin-top:50px;
+	width:100%;
+	height:600px;
+	background:#eee;
+}
+.contact div p{
+margin-top:100px;
+font-size:25px;
+margin-right:400px;
+float:right;
+color:#222;
+}
+
+.contact div button{
+width:220px;
+height:40px;
+background:none;
+padding-left:40px;
+padding-right:40px;
+color:black;
+border:1px solid #222;
+margin:50px 380px;
+float:right;
+cursor:pointer;
+transition:all 0.3s ease-in-out 0s;
+}
+.contact div button:hover{
+	background:#222;
+	color:white;
+	}
+.contact div h4{
+
+	color:#222;
+	
+}
+.contact input{
+	position:absolute;
+	top:650px;
+	left:100px;
+	width:300px;
+	outline:none;
+	border:none;
+	padding:10px;
+}
+
+.map{
+position:absolute;
+top:400px;
+left:50px;
+-webkit-transform:rotateX(70deg) rotateZ(-50deg);
+transform-style:preserve-3d;
+
+}
+
+.map li{
+position:absolute;
+float:left;
+margin:20px;
+width:300px;
+height:420px;
+list-style-type:none;
+background-size: 0, cover;
+transform-style:preserve-3d;
+}
+
+
+.map li:before,.map li:after{
+	content: '';
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background: inherit;
+		background-size: cover;
+}
+
+.map li:before{
+transform-origin:left center;
+	-webkit-transform: rotateY(90deg);
+	width:5px;
+}
+
+ .map li:after{
+	transform-origin: bottom center;
+	transform: rotateX(90deg);
+	height: 5px;
+	top: auto; 
+	bottom:0px;
+	background-position: bottom center;
+}  
+.s{
+position:absolute;
+top:30px;
+left:30px;
+bottom:30px;
+right:30px;
+background:rgba(0,0,0,0.5);
+box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.5);
+-webkit-transform:translateZ(-30px);
+
+}
+
+#link{
+list-style:none;
+position:absolute;
+	top:650px;
+	left:720px;
+
+}
+.contact li{
+display:inline;
+}
+
+footer{
+	position:absolute;
+	top:3480px;
+	left:0;
+	width:100%;
+	height:490px;
+	background:#333;
+}
+
+footer h4,h5{
+	font-weight:normal;
+	margin:50px 50px;
+	font-size:15px;
+}
+
+footer ul{
+	margin:50px 50px;
+}
+footer li{
+	margin:20px;
+	font-size:12px;
+	color:#ccc;
+}
+footer hr{
+	margin:0px 50px;
+	width:92%;
+	border:none;
+	height:1px;
+	background:#999;
+}
+
+footer table{
+	position: absolute;
+	top: 100px;
+	left: 803px;
+	list-style: none;
+}
+table tr td{
+	font-size:13px;
+	padding:20px;
+}
+
+.back-to-top {
+position:fixed;
+display:none;
+bottom:120px;
+right:20px;
+background:rgba(50,50,50,0.7);
+text-decoration: none;
+z-index:5;
+font-size:15px;
+color:white;
+padding:25px 22px;
+border-radius:50%;
+border:1px solid white;
+}
+/*end of home*/
+
+/*Book a Cab css*/
+
+.bookPanel{
+	position:absolute;
+	top:100px;
+	left:0px;
+	width:100%;
+	height:900px;
+	background:white;
+}
+
+.bookPanel h1,.locPanel h1,.enquiry h1,.farePanel h1,.termsHeader h1,.privacyHeader h1,.faqPanel h1,.galleryPanel h1,.servicePage h1{
+	color:#555;
+	font-weight:normal;
+	margin:50px;
+}
+.bookPanel hr{
+	position:absolute;
+	left:280px;
+	top:60px;
+	width:70%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+
+.progressBar{
+	position:absolute;
+	left:50px;
+	top:150px;
+	width:670px;
+	height:24px;
+	list-style:none;
+	background:#666;
+	border-radius:25px;
+	display:inline-block;
+	padding-left:5px;
+}
+
+.progressBar li{
+	margin-left:15px;
+	 
+	display:inline;
+	font-size:10px;
+	border-radius:10px;
+	padding:4px 35px 4px 0px;
+	color:white;
+	
+}
+.progressBar li i{
+color:#white;
+
+padding-left:12px;	
+}
+.servicePanel{
+	position:absolute;
+	top:250px;
+	left:50px;
+	right:50px;
+	background:white;
+	height:500px;
+}	
+.serviceType1{
+	position:absolute;
+	top:0px;
+	left:50px;
+	width:300px;
+	height:400px;
+	overflow:hidden;
+	background:gray;
+	
+	}
+	
+.serviceType2{
+	position:absolute;
+	top:0px;
+	left:480px;
+	width:300px;
+	height:400px;
+	overflow:hidden;
+	background:gray;
+	
+	}
+
+.serviceType3{
+	position:absolute;
+	top:0px;
+	right:50px;
+	width:300px;
+	height:400px;
+	overflow:hidden;
+
+	}
+
+.serviceType1 figure,.serviceType2 figure,.serviceType3 figure{
+	margin:0;
+	transition:all 0.5s cubic-bezier(0.6, 0.1, 0.15, 0.8);
+}
+.serviceType1 figcaption,.serviceType2 figcaption,.serviceType3 figcaption{
+
+	position:absolute;
+	left:0;top:200px;
+	width:300px;
+	height:400px;
+	padding:60px 30px;
+	background:#d5dbd6;
+	color:#222;
+	font-weight:bold;
+	transition:all 0.5s cubic-bezier(0.6, 0.1, 0.15, 0.8);
+	}
+.serviceType1 span,.serviceType2 span,.serviceType3 span{
+	font-weight:normal;
+	opacity:0;
+	transition:all 0.5s cubic-bezier(0.6, 0.1, 0.15, 0.8);
+}	
+.serviceType1:hover  figcaption,.serviceType2:hover  figcaption,.serviceType3:hover  figcaption{
+	left:0;
+	top:0;
+	}
+	
+.serviceType1:hover  figure,.serviceType2:hover  figure,.serviceType3:hover  figure{
+	
+	margin-top:-200px;
+	}
+.serviceType1:hover span,.serviceType2:hover span,.serviceType3:hover span{
+	opacity:1;
+}
+.serviceType1 button,.serviceType2 button,.serviceType3 button{
+	position:absolute;
+	bottom:50px;
+	left:30px;
+	border:none;
+	background:#4a7a1b;
+	outline:none;
+	padding:10px 20px;
+	color:white;
+	cursor:pointer;
+	transition:all 0.5s cubic-bezier(0.6, 0.1, 0.15, 0.8);
+}
+.serviceType1 button:hover,.serviceType2 button:hover,.serviceType3 button:hover{
+	
+	background:#406817;
+	}
+	.brandlist{
+	position:absolute;
+	left:50px;
+	top:250px;
+	width:200px;
+	height:400px;
+	background:#ddd;
+	}
+	.brandlist h5{
+		margin-top:0;
+	float:middle;	
+	}
+.carlist{
+	position: absolute;
+	top: 250px;
+	left: 50px;
+	width: 850px;
+	height: 650px;
+	background:#eee;
+	overflow-y:scroll;
+}
+.carlist div{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:250px;
+	height:400px;
+	background:#FFF;
+	border:1px solid #CCC;
+	
+}
+
+.carlist div:nth-child(2){
+	position:absolute;
+	left:0px;
+	top:400px;
+	height:430px;
+}
+.carlist div h5{
+	width:200px;
+	padding:15px 25px;
+	background:#333;
+	color:#FFF;
+	margin-left:0;
+}
+
+.carlist div ul{
+
+	margin-left:10px;
+}
+
+.carlist div ul li{
+margin-right:10px;
+padding:10px;
+border-bottom:1px solid #eee;	
+}
+
+.carlist div:nth-child(2) ul li{
+border:1px solid #eee;
+margin-bottom:5px;
+
+}
+.carlist div input[type=radio]{
+width:15px;
+height:15px;
+cursor:pointer;
+outline:none;
+	
+}
+#style-15::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#style-15::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+#style-15::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#f04630),
+									   to(#f04630),
+									   color-stop(1,#f04630))
+}
+
+.carlist h5{
+
+margin-top:0;
+
+}
+.carlist table{
+	margin-left:255px;
+	width:590px;
+	border:1px solid #999;
+	border-collapse:collapse;
+	background:#fff;
+}
+.carlist table tr td{
+	margin:0;
+	padding:0;
+	padding-right:50px;
+	padding-bottom:20px;
+	border:none;
+	text-transform:uppercase;
+}
+
+.carlist tr th{
+	float:left;
+	font-size:20px;
+	padding-top:20px;
+	border:none;
+}
+
+
+.carlist table input{
+	border:none;
+	width:100px;
+	height:30px;
+	background:#656a75;
+	color:white;
+	float:left;
+	outline:none;
+	transition:all 0.5s cubic-bezier(0.6, 0.1, 0.15, 0.8);
+	cursor:pointer;
+}
+
+.carlist table input:hover{
+	background:#464951;
+}
+.form1,.form2 {
+	position: absolute;
+	top: 250px;
+	left: 50px;
+	width: 800px;
+	height: 500px;
+	background:white;
+
+
+}
+
+.form1 h5,.form2 h5{
+	font-size:20px;
+	font-weight:normal;
+	color:#222;
+	
+}
+.ch {
+	position: relative;
+	display: block;
+	float: left;
+	background: white;
+	height:25px;
+}
+
+.ch:first-child {
+	padding-left: 5px;
+}
+
+.ch:last-child {
+	padding-right: 2px;
+}
+
+.flp input {
+	margin:0px 50px;
+	width: 320px;
+	display: inline;
+	line-height: 26px;
+	border: 1px solid #bbb;
+	height: 30px;
+	
+}
+.flp label {
+	margin:0px 50px;
+	width: 220px;
+	display: inline;
+	font-size: 12px;
+	line-height: 35px;
+	border: 1px solid #999;
+	height: 12px;
+	padding-left:10px;
+	
+}
+.flp input {
+	
+	padding-left: 10px;
+	outline: none;
+	font-size:15px;
+}
+
+.flp label {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color:#abc;
+	background:transparent;
+	border-color: transparent;
+	cursor: text;
+}
+#next,.carlist button{
+	position:absolute;
+	top:350px;
+	left:580px;
+	width:200px;
+	height:40px;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	background:#67a925;
+	color:white;
+	transition:all 0.3s ease-in-out;
+}
+.flp button:hover,.carlist button:hover{
+	background:#4a7a1b;
+}
+
+
+#register{
+	position:absolute;
+	top:930px;
+	left:35px;
+	width:332px;
+	height:40px;
+	cursor:pointer;
+	background:#5695e0;
+	border:none;
+}
+
+#register:disabled{
+	background:#bbb;
+	cursor:default;
+}
+.bookingDetails{
+	position:absolute;
+	top:300px;
+	right:100px;
+	width:320px;
+	height:560px;
+	background:white;
+	box-shadow:0 5px 5px 2px #ccc;
+}
+.bookingDetails td{
+	border:none;
+	border-bottom:1px solid #ccc;
+	font-size:12px;
+	padding:5px;
+}
+.bookingDetails table{
+	
+	margin:20px;
+}
+.bookingDetails input{
+	width:123px;
+	height:30px;
+	outline:none;
+	border:none;
+	background:none;
+}
+
+.bookingDetails textarea{
+	width:233px;
+	margin:0;
+	border:none;
+	font-size:12px;
+	padding:0;
+}
+#confirm{
+	margin:20px 45px;
+	width:220px;
+	height:40px;
+	background:#67a925;
+	cursor:pointer;
+	transition:all 0.3s ease-in-out;
+}
+#confirm:hover{
+	background:#4a7a1b;
+}
+#canvas {
+	position:absolute;
+	left:952px;
+	top:130px;
+	width: 200px;
+
+	background:white;
+	
+}
+/*end of booking*/
+
+/*location css*/
+
+.locPanel{
+	position:absolute;
+	top:100px;
+	left:0;
+	width:100%;
+	height:1200px;
+	background:white;
+}
+
+.locPanel hr{
+	position:absolute;
+	left:280px;
+	top:60px;
+	width:70%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+
+.locPanel img{
+	margin-left:50px;
+	font-size:25px;
+	
+}
+.locPanel p{
+	margin-left:130px;
+	margin-top:-45px;
+	font-size:25px;
+	
+}
+
+.enquiry{
+	position:absolute;
+	top:1200px;
+	left:0;
+	width:100%;
+	height:1000px;
+	background:white;
+}
+
+.enquiry hr{
+	position:absolute;
+	left:220px;
+	top:60px;
+	width:75%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+
+.enquiry fieldset{
+	margin:50px 400px;
+	height:450px;
+	border:none;
+
+}
+
+fieldset input,textarea{
+	margin:10px 40px;
+	width:450px;
+	padding:10px;
+	outline:none;
+	border:1px solid #ddd;
+	resize:none;
+}
+
+fieldset input:focus,.enquiry textarea:focus{
+	border:1px solid #5695e0;
+	color:#5695e0;
+}
+
+#send{
+	background:#5695e0;
+	cursor:pointer;
+	transition:all 0.3s;
+}
+
+#send:hover{
+	background:#16447c;
+	color:white;
+}
+
+/*end of Location*/
+
+/*Tariffs css*/
+
+.farePanel{
+	position:absolute;
+	top:100px;
+	left:0;
+	width:100%;
+	height:1200px;
+	background:white;
+}
+
+.farePanel hr{
+	position:absolute;
+	left:240px;
+	top:60px;
+	width:73%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+.farePanel table{
+	margin:50px;
+	width:1250px;
+}
+.farePanel tr td{
+	color:#222;
+	border-bottom:1px solid #ccc;
+	padding: 30px;
+	
+}
+
+.farePanel tr:nth-child(2) td{
+	font-weight:bold;
+	color:#bbb;
+	font-size:15px;
+	}
+	
+.farePanel tr:nth-child(3) td{
+	color:#5695e0;
+	}
+	
+.farePanel p{
+	margin:50px;
+	font-size:15px;
+}
+/*end of tariffs*/
+
+/*terms and conditions css*/
+
+.termsHeader{
+	position:absolute;
+	top:100px;
+	left:50px;
+	right:58px;
+	height:150px;
+	background:white;
+}
+
+.termsHeader hr{
+	position:absolute;
+	left:650px;
+	top:60px;
+	width:43%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+.termsPanel{
+	position:absolute;
+	left:50px;
+	top:255px;
+	width:92%;
+	height:10200px;
+	background:white;
+}
+
+.termsPanel p,.termsPanel ul,.privacyPanel p{
+	font-size:14px;
+	margin:100px;
+	color:#555;
+	line-height:150%;
+}
+
+.termsPanel h4,.privacyPanel h4{
+	font-size:18px;
+	margin:-50px 100px;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+
+.termsPanel  span,.privacyPanel span{
+	font-size:14px;
+	text-transform:uppercase;
+	font-weight:normal;
+	color:#5695e0;
+}
+
+.termsPanel li,.privacyPanel li{
+	margin-top:20px;
+}
+
+.privacyHeader{
+position:absolute;
+	top:10500px;
+	left:50px;
+	right:58px;
+	height:150px;
+	background:white;
+}
+.privacyHeader hr{
+	position:absolute;
+	left:350px;
+	top:60px;
+	width:67%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+.privacyPanel{
+	position:absolute;
+	left:50px;
+	top:10655px;
+	width:92%;
+	height:6900px;
+	background:white;
+}
+.privacyPanel ul{
+	font-size:14px;
+	margin-left:100px;
+	margin-right:100px;
+	margin-top:-60px;
+	margin-bottom:100px;
+	color:#555;
+	line-height:150%;
+	
+}
+.privacyPanel label{
+	font-size:14px;
+	text-transform:uppercase;
+	font-weight:normal;
+	color:black;
+}
+
+.custom_select {
+  float: left;
+  margin-left: -150px;
+  font-size:12px;
+  width:330px;
+}
+
+.select_opts { background-color: #fff;box-shadow:0px 5px 5px #8f8f8f; }
+
+.option_title, .option { padding: 8px 20px; }
+
+.option_title {
+  font-weight: normal;
+  text-transform:uppercase;
+  padding-right: 120px;
+  background-color: #ECECEC;
+}
+
+.option { border-top: none; }
+
+.option:hover {color: #5695e0; }
+
+.option.current {
+  color: #FFF;
+  background-color: #17bed0;
+}
+
+.option_title::selection { background-color: transparent; }
+ .option_title::-moz-selection {
+background-color: transparent;
+}
+
+/* pure CSS Arrow */
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+
+.custom_select.opened .arrow {
+  border-bottom: 5px solid #17bed0;
+  border-top: none;
+}
+
+/*end of terms and condition*/
+/*Faq css starts */
+
+.faqPanel{
+	position:absolute;
+	top:100px;
+	left:0px;
+	right:0px;
+	height:1850px;
+	background:white;
+} 
+
+.faqPanel hr{
+	position:absolute;
+	left:550px;
+	top:60px;
+	width:49%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+
+.faqPanel h4{
+	font-size:18px;
+	margin:80px 50px;
+	text-transform:uppercase;
+	font-weight:normal;
+	color:#5695e0;
+}
+
+.faqPanel p{
+	font-size:14px;
+	margin:-50px 50px;
+	color:#555;
+	line-height:150%;
+}
+
+.faqPanel span{
+	text-transform:uppercase;
+	color:#222;
+}
+/*end of faq*/
+/*Gallery css starts */
+
+.galleryPanel{
+	position:absolute;
+	top:100px;
+	left:0px;
+	right:0px;
+	height:3050px;
+	background:white;
+}
+
+.galleryPanel hr{
+	position:absolute;
+	left:290px;
+	top:60px;
+	width:70%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+#lightbox {
+
+	width: 1320px; 
+	border-bottom: 1px solid #ccc;
+	
+}
+
+#lightbox ul {
+	margin-left:0px;
+	overflow: hidden;
+	
+}
+/*Image styles*/
+#lightbox ul li {
+	float: left;
+	background: #fff;
+	margin: 0;
+	list-style-type: none;
+	position: relative;
+	cursor: pointer;
+}
+/*No right margin for images in the 2nd column*/
+
+#lightbox ul li img {
+	width:420px;
+	 height:320px;
+	display: block;
+}
+
+/*Image titles*/
+#lightbox .image_title {
+	width: 420px; height: 320px;
+	background: rgba(86, 149, 224, 0.6);
+	position: absolute;
+	top: 0; left: 0;
+	display: table;
+	/*Hover effect - default state*/
+	opacity: 0;
+	transition: all 0.5s;
+}
+#lightbox .title {
+	color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+	text-transform: uppercase;
+	font-size: 24px;
+	text-align: center;
+	/*Vertical center align*/
+	display: table-cell;
+	vertical-align: middle;
+	/*Hover effect - default state*/
+	transform: scale(0.2);
+	transition: all 0.25s;
+}
+/*Zoom icon over each title using iconfont and pseudo elements*/
+#lightbox .title::before {
+	content: '\1F50D';
+	font-family: entypo;
+	font-size: 24px;
+	color: #fff;
+	opacity: 0.5;
+	display: block;
+	line-height: 36px;
+}
+/*Hover states*/
+#lightbox li:hover {
+	box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.75);
+}
+#lightbox li:hover .image_title {
+	opacity: 1;
+}
+#lightbox li:hover .title {
+	transform: scale(1);
+}
+
+/*Lets change the iconfont to websymbols since entypo has some issues with rendering on windows*/
+@font-face {
+	font-family: websymbols;
+	src: url("http://thecodeplayer.com/uploads/fonts/websymbols.eot");
+	src: url('http://thecodeplayer.com/uploads/fonts/websymbols.eot?#iefix') format('embedded-opentype'),
+     url('http://thecodeplayer.com/uploads/fonts/websymbols.woff') format('woff'),
+     url('http://thecodeplayer.com/uploads/fonts/websymbols.ttf') format('truetype'), url('http://thecodeplayer.com/uploads/fonts/websymbols.svg#WebSymbolsRegular') format('svg');
+}
+
+
+
+/*Lightbox element style*/
+.lb_backdrop {
+	background: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+}
+/*The canvas contains the larger image*/
+.lb_canvas {
+	background: white;
+	width: 50px; height: 50px;
+	position: fixed;
+	top: 0; left: 0; /*Will be centered later by Jquery*/
+	box-shadow: 0 0 20px 5px black;
+	padding: 0px;
+}
+/*A separate class for loading GIF, for easy Jquery handling*/
+.lb_canvas.loading {
+	background: white url("http://thecodeplayer.com/uploads/media/loading.gif") center center no-repeat;
+}
+/*Lightbox Controls*/
+.lb_controls {
+	width: 400px; 
+	background: rgba(50, 50, 50, 0.5);
+	position: fixed;
+	bottom: 10px;
+	color: white;
+	/*To horizontally center it*/
+	left: 0; right: 0; margin: 0 auto; 
+}
+.lb_controls span {
+	line-height: 30px;
+	height: 30px;
+}
+.lb_controls span.inactive {
+	opacity: 0.25;
+}
+.lb_previous, .lb_next {
+	position: absolute;
+	top: 0;
+	padding: 5px 12px;
+	font-family: websymbols;
+	font-size: 14px;
+	background: black;
+	cursor: pointer;
+}
+.lb_previous {
+	left: 0;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.lb_next {
+	right: 0;
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.lb_title {
+	text-align: center;
+	display: block;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 5px 0;
+	font-weight: normal;
+}
+/*end of GALLERY*/
+/*service css starts*/
+
+.servicePage{
+	position:absolute;
+	top:100px;
+	left:0px;
+	right:0px;
+	height:1850px;
+	background:white;
+}
+
+.servicePage hr{
+	position:absolute;
+	left:290px;
+	top:60px;
+	width:69%;
+	border:none;
+	height:1px;
+	background:#ccc;
+}
+
+.servicePage div{
+	margin:0px;
+	width:100%;
+	height:500px;
+	overflow:hidden;
+	
+}
+.servicePage div img{
+	margin-left:200px;
+	}
+.servInfo h1{
+	text-transform:uppercase;
+	color:white;
+	
+}
+.servInfo p{
+	margin:50px;
+	color:white;
+}
+/* end of Service*/
+/* Cancel css starts*/
+
+#cancelSrc{
+
+}
+
+.forgetPanel{
+position:absolute;
+top:150px;
+left:400px;
+width:600px;
+height:500px;
+background:#FFF;	
+}
+
+.forgetPanel h2{
+margin: 50px;	
+}

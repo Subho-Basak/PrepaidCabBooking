@@ -1,0 +1,38 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+ <form>
+   First name: <input type="text" name="firstname" required="required"><br>
+   Last name: <input type="text" name="lastname" required="required">
+   Age: <input type="text" name="age" required="required">
+   Gender: <input type="text" name="gender" required="required">
+   City: <input type="text" name="city" required="required">
+   Locality: <input type="text" name="locality">
+   Address: <input type="text" name="address">
+</form>
+<p id='percentage'>0% completed</p>
+</body>
+<script src="jquery-2.1.4.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('input').on('change', function(){
+        var cntreq = 0;
+        var cntvals = 0;
+        $('input').each(function(i, val) {
+            if($(this).attr('required') == 'required') {
+                cntreq++;
+                if($(this).val() != '') {
+                    cntvals++;
+                }
+            }
+        });
+        var count = (cntvals/cntreq)*100;
+        $('#percentage').empty();
+        alert(count+'% completed');
+    });
+});
+</script>
+
+</html>
