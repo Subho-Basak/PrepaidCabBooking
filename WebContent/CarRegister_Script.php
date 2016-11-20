@@ -9,7 +9,6 @@ $connection = db_connect();
 	}
 $car_id = $_POST['id'];
 $car_brand=$_POST['brand'];
-$car_name=$_POST['name'];
 $car_type=$_POST['type'];
 $capacity=$_POST['capacity'];
 $cost=$_POST['cost'];

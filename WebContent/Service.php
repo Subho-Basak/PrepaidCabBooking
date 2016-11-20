@@ -72,7 +72,7 @@ table tr td {
 			href="Tariffs.php">TARIFFS </a> <a href="Gallery.php">GALLERY</a> <a
 			href="Service.php"
 			style="padding: 16px 12px 16px 12px; border-bottom: 1px solid cyan">SERVICES
-		</a> <a href="BookCab.php">BOOK FOR RIDE</a> <a href="HomePage.html">HOME
+		</a> <a href="BookCab.php">BOOK FOR RIDE</a> <a href="HomePage.php">HOME
 		</a>
 	</div>
 

@@ -15,37 +15,27 @@
 
 #generalspecs {
 	position: absolute;
-	left: 350px;
+	left: 300px;
 	top: 200px;
-	padding: 30px 200px 30px 200px;
+	width:auto;
+	height:auto;
+	padding: 30px 100px 30px 100px;
 	background: #d0d0d0;
 	box-shadow: 5px 5px 5px gray;
 }
 
-#minspecs {
-	position: absolute;
-	left: 350px;
-	top: 800px;
-	padding: 30px 200px 30px 210px;
-	background: #d0d0d0;
-	box-shadow: 5px 5px 5px gray;
-}
-
-#recomend {
-	position: absolute;
-	left: 350px;
-	top: 1150px;
-	padding: 30px 200px 30px 210px;
-	background: #d0d0d0;
-	box-shadow: 5px 5px 5px gray;
-}
 
 table input {
 	width: 300px;
 	height: 25px;
 	border: 1px solid white;
 }
+table input[type="radio"]{
+margin-left:100px;
+width:20px;
+height:15px;
 
+}
 table td {
 	width: 150px;
 }
@@ -59,8 +49,8 @@ label {
 
 #sbmt {
 	position: absolute;
-	top: 497px;
-	right: 274px;
+	top: 597px;
+	right: 374px;
 	width: 100px;
 	height: 30px;
 	border: none;
@@ -92,28 +82,46 @@ label {
 				<td>Brand :</td>
 				<td><input type="text" name="brand" /></td>
 			</tr>
-			<tr>
-				<td>Name :</td>
-				<td><input type="text" name="name"  /></td>
-			</tr>
-	
+			
 			<tr>
 				<td>Type :</td>
-				<td><input type="text" name="type"  /></td>
-			</tr>
-			<tr>
-				<td>Capacity :</td>
-				<td><input type="number" name="capacity"  /></td>
+				<td><select name="type">
+						<option>Micro</option>
+						<option>Mini</option>
+						<option>SUV</option>
+						<option>Lux Sedan</option>
+					</select>
+				</td>
 			</tr>
 			
 			<tr>
-				<td>Cost :</td>
+				<td>Capacity :</td>
+				<td><select name="capacity">
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><input type="radio" name="ac"  />AC</td>
+				<td><input type="radio" name="ac"  />Wifi</td>
+			</tr>
+			
+			<tr>
+				<td>Rates :</td>
 				<td><input type="text" name="cost"  /></td>
 			</tr>
 			<tr>
 				<td>Upload a photo :</td>
 				<td><input type="file" name="photo" id="upload" /></td>
 
+			</tr>
+			
+			<tr>
+				<td>Quantity :</td>
+				<td><input type="text" name="qty"  /></td>
 			</tr>
 </table>
 		<input type="submit" value="SAVE" id="sbmt" />

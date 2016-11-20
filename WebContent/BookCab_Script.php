@@ -12,20 +12,18 @@ $connection = db_connect();
 $service=$_POST['service'];
 $n= substr($service, 0, 1);
 $rand=mt_rand(10000000,100000000);
-$book_id=$n ."1437-" .$rand;//$_POST['book_id'];
-
+$book_id=$n ."1437-" .$rand;
 $car_name=$_POST['carname'];
-//$cus_name=$_POST['fullname'];
-//$contact=$_POST['contact'];
-//$email_id=$_POST['email'];
 $location=$_POST['location'];
-//$zip=$_POST['zip'];
 $source=$_POST['source'];
 $dest=$_POST['destination'];
 $pickup_date=$_POST['pickup_date'];
 $pickup_time=$_POST['pickup_time'];
 $distance=$_POST['distance'];
-$tot_cost=$_POST['fare'];
+$time=$_POST['time'];
+$fare=$_POST['fare'];
+$addcost=$_POST['addCost'];
+$tot_cost=$_POST['total'];
 
 
 /*$sql="insert into boking_details(book_id,service,car_name,cus_name,contact,email_id,location,zip,source,dest,pickup_date,pickup_time,distance,tot_cost) values('$book_id','$service','$car_name','$cus_name','$contact','$email_id','$location','$zip','$source','$dest','$pickup_date','$pickup_time','$distance','$tot_cost')" ;
@@ -58,9 +56,6 @@ if($result)
 {
 	echo "error";
 }*/
-
-
-
 
 
 

@@ -69,7 +69,7 @@ table tr td {
 			style="padding: 16px 12px 16px 12px; border-bottom: 1px solid cyan">FAQ
 		</a> <a href="ContactUs.jsp">CONTACT US </a> <a href="Tariffs.jsp">TARIFFS
 		</a> <a href="Gallery.jsp">GALLERY</a> <a href="#">SERVICES </a> <a
-			href="BookCab.jsp">BOOK FOR RIDE</a> <a href="HomePage.html">HOME
+			href="BookCab.jsp">BOOK FOR RIDE</a> <a href="HomePage.php">HOME
 		</a>
 	</div>
 

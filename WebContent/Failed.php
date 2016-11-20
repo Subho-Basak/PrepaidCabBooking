@@ -3,44 +3,44 @@
 <head>
 <link href="Style/Home.css" rel="stylesheet">
 <style type="text/css">
+p,ul,span,li{
+font-family:arial unicode MS;
+}
 
-h1{
-margin:250px 400px;
+p{
+margin:220px 500px;
 width:500px;
 padding:30px 60px;
-background:#fff;
-font-weight:normal;
-font-size:20px;
-box-shadow:0px 2px 2px 2px #aaa;
+font-weight:100;
+font-size:16px;
+color:gray;
 }
 ul{
-margin:-240px 310px ;
+margin:-260px 460px ;
 width:500px;
 padding:30px 105px;
-background:#fff;
 font-weight:normal;
-font-size:15px;
-box-shadow:0px 2px 2px 2px #aaa;
+font-size:12px;
+color:gray;
 }
 li{
-margin:20px;	
+margin:10px;	
 }
 span{
 position:absolute;
-left:317px;
+left:487px;
 top:250px;
-background:black;
-color:white;
-padding:14px 30px;
-font-size:45px;
-box-shadow:0px 2px 2px 2px #aaa;
+padding:5px 18px;
+font-size:23px;
+border-radius:50%;
+border:2px solid #000;
 
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Congratulation! | Your record have been saved successfully</title>
+<title>Sorry! Something went wrong.</title>
 </head>
-<body bgcolor="#ccc">
+<body bgcolor="#eee">
 <div class="header1">
 
 
@@ -53,18 +53,18 @@ box-shadow:0px 2px 2px 2px #aaa;
 
 		<a href="Faq.jsp">FAQ </a> <a href="ContactUs.jsp">CONTACT US </a> <a
 			href="#">TARIFFS </a> <a href="Gallery.jsp">GALLERY</a> <a href="Service.jsp">SERVICES
-		</a> <a href="BookCab.jsp">BOOK FOR RIDE</a> <a href="HomePage.html">HOME
+		</a> <a href="BookCab.jsp">BOOK FOR RIDE</a> <a href="HomePage.php">HOME
 		</a>
 	</div>
-	<span>:(</span>
-	<h1>LOGIN FAILED.</h1>
+	<span>!</span>
+	<p>Sorry. Your registration process is not successful.<br>Please check the following:</p>
     
     <ul>
-    <li>Please check your Email ID.</li>
-    <li>Please check your Password.</li>
-    <li>Please check your Capslock.</li>
+    <li>Make sure that you have filled all the fields properly.</li>
+    <li>Make sure that there are network connection right now.</li>
+    <li>Otherwise,the server may be overloaded.Please try again later.</li>
     </ul>
-    </h2>
+   
 
 </body>
 </html>

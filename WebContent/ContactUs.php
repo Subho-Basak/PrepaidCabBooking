@@ -1,56 +1,41 @@
 <html> 
    <head> 
    <link href="Style/Home.css" rel="stylesheet">
+   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
      <title>Contact Us | Find Us on Map.</title> 
      <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/> 
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+
+
      <script type="text/javascript"> 
-   var directionDisplay; 
-   var map; 
+
     
    function initialize() { 
-    directionsDisplay = new google.maps.DirectionsRenderer(); 
-     var bangalore = new google.maps.LatLng(12.9716 , 77.5946); 
-    var myOptions = { 
-      zoom:12, 
-      mapTypeId: google.maps.MapTypeId.ROADMAP, 
-       center: bangalore
-     } 
-      
-     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-     directionsDisplay.setMap(map); 
-   } 
-   var directionsService = new google.maps.DirectionsService(); 
-    
-       function calcRoute() { 
-      var start = document.getElementById("start").value; 
-      var end = document.getElementById("end").value; 
-      var distanceInput = document.getElementById("distance");
-      var request = { 
-       origin:start, 
-       destination:end, 
-        travelMode: google.maps.DirectionsTravelMode.DRIVING 
-     }; 
-      
-     directionsService.route(request, function(response, status) { 
-        if (status == google.maps.DirectionsStatus.OK) { 
-         directionsDisplay.setDirections(response); 
-         distanceInput.value = response.routes[0].legs[0].distance.value / 1000;
-        } 
-      }); 
-    } 
+	   {
+		   var mapCanvas = document.getElementById("map_canvas");
+		   var mapOptions = {
+		     center: new google.maps.LatLng(51.5, -0.2),
+		     zoom: 10
+		   }
+		   var map = new google.maps.Map(mapCanvas, mapOptions);
+		 }
 
 </script> 
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=initialize"></script>
+
+
      
      <style type="text/css"> 
        #map_canvas { 
-       margin:450px 50px;
-         height: 100%; 
+       margin:850px 0px;
+       margin-bottom:50px;
+       width:100%;
+       height: 100%; 
        } 
        
     footer{
 	position:absolute;
-	top:1900px;
+	top:1450px;
 	left:0;
 	width:100%;
 	height:490px;
@@ -86,7 +71,7 @@ footer table{
 	left:900px;
 	list-style:none;
 }
-table tr td{
+footer table tr td{
 	font-size:13px;
 	padding:20px;
 	color:#fff;
@@ -94,7 +79,7 @@ table tr td{
        
      </style> 
   </head> 
- <body onLoad="initialize()" bgcolor="#ccc">
+ <body bgcolor="#ccc">
     
     <div class="header1">
 
@@ -108,7 +93,7 @@ table tr td{
 
 		<a href="Faq.php">FAQ </a> <a href="ContactUs.php" style="padding: 16px 12px 16px 12px; border-bottom: 1px solid cyan">CONTACT US </a> <a href="Tariffs.php">TARIFFS
 		</a> <a href="Gallery.php">GALLERY</a> <a href="Service.php">SERVICES </a> <a href="BookCab.php">BOOK
-			FOR RIDE</a> <a href="HomePage.html">HOME
+			FOR RIDE</a> <a href="HomePage.php">HOME
 		</a>
 	</div>
     
@@ -116,20 +101,46 @@ table tr td{
     <h1>CONTACT US</h1><hr>
     
 
-   <img src="Images\mail.png" width="68dp" height="68dp"><p>mail@NationalCab.com</p>
-   <img src="Images\loc.png" width="68dp" height="68dp"><p>	1stFloor,ESI Disp.Bldg, peenya, Bangalore – 560 058 3rd phase, Peenya, Bangalore-58</p>
-
+  <table id="contact">
+  
+  <tr>
+  
+  	<td rowspan="2"><i class="fa fa-map-marker" aria-hidden="true" STYLE="padding: 15px 18px"></i></td>
+  	<td>Address</td>
+  	
+  </tr>	
+  	
+  <tr><td><span>1stFloor,ESI Disp.Bldg, peenya, Bangalore</span></td></tr>
+  
+  <tr>
+  
+  	<td rowspan="2"><i class="fa fa-envelope" aria-hidden="true"></i></td>	
+	<td>Phone</td>
+	</tr>
+	
+  	<tr><td><span>+1 809 876 6543</span></td></tr>
+  
+   <tr>
+   	<td rowspan="2"><i class="fa fa-phone" aria-hidden="true" STYLE="padding: 15px 16px"></i></td>
+  	<td>Email</td>
+  </tr>
+  	<tr><td><span>mail@FastCab.com</span></td></tr>
+  
+ 
+    </table>
+    
     </div>
     
     <div class="enquiry">
-     <h1>ENQUIRY</h1><hr>
+     <h2>Get in touch with us.</h2>
     
     <fieldset>
-    <input type="text" placeholder="YOUR NAME">
-    <input type="email" placeholder="YOUR EMAIL ID">
-    <input type="text" placeholder="SUBJECT">
-    <textarea rows="10" cols="50" placeholder="YOUR MESSAGE" ></textarea>
-    <input type="submit" value="SEND" id="send">
+	    <input type="text" placeholder="YOUR NAME" size="45">
+	    <input type="text" placeholder="YOUR CONTACT NO" size="45">
+	    <input type="email" placeholder="YOUR EMAIL ID" size="45">
+	    <input type="text" placeholder="SUBJECT" size="45">
+	    <textarea rows="10" cols="98" placeholder="YOUR MESSAGE" ></textarea>
+	    <button type="submit"  id="send"><i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp; Send Message</button>
     
     </fieldset>
     
@@ -137,7 +148,7 @@ table tr td{
     
      <div id="map_canvas"></div> 
      
-     <footer>
+<footer>
 <h4>WE ARE HERE TO OFFER</h4>
 
 <ul>
@@ -168,5 +179,8 @@ mail@NationalCab.com</td>
 <hr>
 <h5>Copyright &#169 2010 - 2016. All Rights Reserved</h5>
 </footer>
+
+
+
    </body> 
  </html> 

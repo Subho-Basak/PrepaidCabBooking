@@ -1,34 +1,29 @@
-<?php
-session_start();
-include "./connect_db.inc";
-$connection = db_connect();
-
-	if ( ! $connection ) 
-        {
-		print( "cannot connect to database" );
-		exit;
-	}
-
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="Style/Home.css" rel="stylesheet">
-<link href="Style/MyAccount.css" rel="stylesheet">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Material Design Inspired Tabs Modal Demo</title>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+/* CSS reset */
 
-<title>My Account | FastCab. </title>
 
-<style type="text/CSS">
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-
+  margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
+  font: inherit;
   vertical-align: baseline
 }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+
+body { line-height: 1 }
 
 ol, ul { list-style: none }
 
@@ -37,6 +32,31 @@ blockquote, q { quotes: none }
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #ccc;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ [ripple] {
+ z-index: 1;
+ position: relative;
+ overflow: hidden;
 }
 
 [ripple] .ripple {
@@ -48,9 +68,6 @@ blockquote:before, blockquote:after, q:before, q:after {
   -webkit-animation: ripple 1.6s;
   animation: ripple 1.6s;
 }
-
-
-
  @-webkit-keyframes 
 ripple {  0% {
  -webkit-transform: scale(1);
@@ -79,19 +96,18 @@ ripple {  0% {
 .tabs {
   z-index: 15px;
   position: fixed;
-  top:20px;
+  top:00px;
   left:400px;
   background: #FFFFFF;
   width: 600px;
+  border-radius: 4px;
   box-sizing: border-box;
   margin: 150px auto 10px;
   overflow: hidden;
-  padding:0;
 }
 
 .tabs-header {
   position: relative;
-  left:0;
   background: #fff;
   overflow: hidden;
 }
@@ -108,7 +124,6 @@ ripple {  0% {
 }
 
 .tabs-header ul {
-	margin:0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,28 +141,56 @@ ripple {  0% {
 
 .tabs-header li {
 
-font-size:14px;
+
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   
 }
-.tabs-header li i{
-background:none;
-color:#999;
-}
+
 .tabs-header a {
   z-index: 1;
   display: block;
   box-sizing: border-box;
-  margin:0;
-  padding: 15px 36px;
+  padding: 15px 20px;
   color: #999;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
-  
 }
 
+.tabs-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  color: #999;
+
+}
+
+.tabs-nav:before {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: 0 0 20px 10px #4285F4;
+}
+
+.tabs-nav i {
+  border-radius: 100%;
+  cursor: pointer;
+}
 
 .tabs-content {
   position: relative;
@@ -172,70 +215,22 @@ color:#999;
 
 .tabs-content .tab.active { display: block; }
 
-
 </style>
-
 </head>
 
 <body>
-
-<div class="header1">
-
-	<?php include("Header.php");?>
-	</div>
-	<div class="header2">
-	<?php include("Header2.php");?>
-	</div>
-	
-	<img src="Images\procover.jpg" width="1340dp" height="270dp" style="margin:0;"></img>
-	
-	    <?php
-	$cus_name=$_SESSION['fullname'];
-	$loc=$_SESSION['location'];
-	$email=$_SESSION['email'];
-	?>
-	
-    <ul class="accountMenu">
-    <li><img src="Images\coverimg.jpg"></img></li>
-    <li><p style="font-size:16px;color:black"><?php echo $cus_name; ?></p></li>
-	<li><p><?php echo $email; ?></p></li>
-	<li><p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;<?php echo $loc; ?></p></li>
-	<li><button id="editBtn" style="margin-left:30px;font-size:14px"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp; Edit Profile</button></li>
-    </ul>
-
-
-
-	<div class="accountPanel">
-
-			<button class="dropbtn"><i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp;&nbsp;Sign Out</button>
-			
-
-		
-		
-		
-		<ul class="accntHdr">
-		<li><i class="fa fa-calendar-check-o" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Current Booking</li>
-		<li><i class="fa fa-history" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;History</li>
-		</ul>
-		<h3>Current Booking</h3>
-		</div>
-
-
-
-	<!--edit profile tabs hidden  --> 
-  <div style="position:fixed;left:0;top:0px;background:rgba(50,50,50,0.7);width:100%;height:100%;" id="editPanel"> 
-  <div class="tabs">
+ 
+<div class="tabs">
   <div class="tabs-header">
     <div class="border"></div>
     <ul>
-      <li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#ccc"><i class="fa fa-cog" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;General</a></li>
-      <li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#ccc"><i class="fa fa-camera" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Change Photo</a></li>
-      <li><a href="#tab-3" tab-id="3" ripple="ripple" ripple-color="#ccc"><i class="fa fa-unlock-alt" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;Security</a></li>
-      
+      <li class="active"><a href="#tab-1" tab-id="1" ripple="ripple" ripple-color="#ccc">General</a></li>
+      <li><a href="#tab-2" tab-id="2" ripple="ripple" ripple-color="#ccc">Change Photo</a></li>
+      <li><a href="#tab-3" tab-id="3" ripple="ripple" ripple-color="#ccc">Security</a></li>
+      <li><a href="#tab-4" tab-id="4" ripple="ripple" ripple-color="#ccc">Tab 4</a></li>
     </ul>
    
   </div>
-  
   <div class="tabs-content">
     <div tab-id="1" class="tab active">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis dictum enim. Aliquam pharetra efficitur quam, eu posuere ipsum venenatis a. Sed gravida eu sapien et pretium. Phasellus ullamcorper metus in dolor pellentesque lacinia. Nulla lacus risus, porta at purus id, faucibus scelerisque erat. Praesent congue sagittis nibh ut lobortis. Donec elit ante, lacinia sed sem non, condimentum pharetra leo. In eu fermentum felis. Suspendisse nec odio id tellus condimentum cursus ac ac orci. Etiam malesuada condimentum magna in consequat.</div>
     <div tab-id="2" class="tab">2. Donec vel nibh tortor. Donec ut nunc luctus, maximus metus at, accumsan purus.</div>
@@ -243,11 +238,7 @@ color:#999;
     <div tab-id="4" class="tab">4. Maecenas felis risus, mattis a hendrerit ut, placerat lobortis risus. Etiam vel ipsum ut quam interdum volutpat egestas vitae metus. </div>
   </div>
 </div>
-    
-    </div>
-    <!-- js for tab pane -->
-    
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> 
 <script>
 $(document).ready(function () {
 
@@ -400,21 +391,7 @@ $(document).ready(function () {
     }, 1500);
   });
 });
-</script>
-
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-	$("#editPanel").fadeOut(300);
-	
-	$("#editBtn").click(function(){
-	$("#editPanel").fadeIn(300);	
-	});
-});
-</script>
-
-<script type="text/javascript">
+</script><script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36251023-1']);

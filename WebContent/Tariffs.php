@@ -78,7 +78,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 		<a href="Faq.php">FAQ </a> <a href="ContactUs.php" >CONTACT US </a> <a href="Tariffs.php" style="padding: 16px 12px 16px 12px; border-bottom: 1px solid cyan">TARIFFS
 		</a> <a href="Gallery.php">GALLERY</a> <a href="Service.php">SERVICES </a> <a href="BookCab.php">BOOK
-			FOR RIDE</a> <a href="HomePage.html">HOME
+			FOR RIDE</a> <a href="HomePage.php">HOME
 		</a>
 	</div>
     

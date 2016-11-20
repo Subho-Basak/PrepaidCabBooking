@@ -64,7 +64,7 @@ body {
 <body>
 	
 	
-	<div class="logo"><img src="Images/logo.png" width="253dp" height="100dp"></div>
+	<div class="logo"><img src="Images\poster.png" width="133dp" height="160dp"></div>
 	
 	
 	<a href="#" class="back-to-top">TOP</a>
@@ -86,8 +86,8 @@ body {
 		</a>
 	</div>
 	<div id="ajSlider">
-		<img src="Images\cover3.jpg" /> <img src="Images\cover1.jpg" /> <img
-			src="Images\cover2.jpg" /> <img src="Images\cover2.jpg" /> <img
+		<img src="Images\cover3.jpg" /> <img src="Images\cover4.jpg" /> <img
+			src="Images\cover5.jpg" /> <img src="Images\cover2.jpg" /> <img
 			src="Images\cover1.jpg" /> <a>EXPERIENCED DRIVERS</a> <a>FEEL THE
 			COMFORT</a> <a>TRUST AND SAFETY</a> <a>+1000 HAPPY CUSTOMERS</a> <a>148
 			CITIES COVERED</a>

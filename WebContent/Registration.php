@@ -8,7 +8,9 @@
 
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css"
 	rel="stylesheet" type="text/css">
-<link href="Style/Home.css" rel="stylesheet">
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href="Style/RegisterCSS.css" rel="stylesheet">
 <link rel="stylesheet" href="Style/calendar.css">
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="jquery-2.1.4.js"></script>
@@ -44,6 +46,8 @@ font-size:12px;
     border-radius:4px;
     box-shadow: 5px 5px 8px #CCC;
 }
+
+
 </style>
 
 </head>
@@ -68,166 +72,89 @@ font-size:12px;
 
 
 
-<canvas id="canvas" width="400" height="400"></canvas>
-<label style=position:absolute;left:1005px;top:300px;color:#4a7a1b>Completed!</label>
-	<div class="form1"
-		style="width: 500px; margin-left: 400px; margin-top: -120px;height:1000px">
+	<div class="regPanel">
 
-		<h5 style="margin-left:85px">CREATE  FASTCAB  ACCOUNT</h5>
+	<img src="Images\reg.jpg" width="500dp" height="720dp" style="margin-left:100px;">
+	<div style="position:absolute;left:100px;top:50px;width:500px;height:720px;background:rgba(230,2,6,0.7)">
+	<i class="fa fa-check" aria-hidden="true" style="margin:300px 200px;font-size:50px;padding:20px;background:#ccc;border-radius:50%;"></i>
+	<p align="center" style="margin: -280px 100px;font-size:25px;color:white">CREATE ACCOUNT<br> FOR FREE</p>
+	
+	</div>
+	
+	
+	
+		<form class="regform" method="post" action="Registration_Script.php" name="reg" >
+
+				<h3 >CREATE  FASTCAB  ACCOUNT</h3><br>
+<table >
+	
+	<tr>
+				<td><label for="fullname">FIRST NAME</label><br>
+				<input type="text" id="fullname" name="fullname" class="inputs" required="required" size="31"/></td>
+				
+				<td><label for="fullname">LAST NAME</label><br>
+				<input type="text" id="fullname" name="fullname" class="inputs" required="required" size="31"/><br></td>
+	</tr>
+	
+	<tr>
+				<td colspan="2"><label for="contact">MOBILE</label><br>
+				<input type="text" id="contact" maxlength="10" name="contact" class="inputs" required="required" size="72"/> </td>
+	</tr>		
+
+	<tr>
+		<td colspan="2"><label for="email">EMAIL ID</label><br>
+			<input type="email" id="email" name="email" class="inputs" required="required" size="72"/> </td>
+	</tr>
 		
-		
-		
-		<form class="flp" method="post" action="Registration_Script.php" name="reg" >
+	<tr>
+	
+		<td ><label for="zip">ZIP CODE</label><br>
+		<input type="text" id="zip" name="zip" class="inputs" required="required" size="31"/> </td>
+
+		<td ><label >LOCATION</label><br>
+		<input type="text" id="zip" name="zip" class="inputs" required="required" size="31"/></td>
+
+	</tr>	
 
 
-			<div style="position: absolute; left: 35px; top: 150px;">
-				<input type="text" id="fullname" name="fullname" onblur="getName()" class="inputs" required="required"/>
-				<label for="fullname">FULL NAME*</label>
-			</div>
-
-
-			<div style="position: absolute; left: 35px; top: 220px;">
-				<input type="text" id="contact" maxlength="10" name="contact" class="inputs" required="required"/> <label
-					for="contact">PHONE NO(+XX)XXX-XXX-XXXX</label>
-			</div>
-
-
-
-			<div style="position: absolute; left: 35px; top: 290px;">
-				<input type="text" id="zip" name="zip" class="inputs" required="required"/> <label for="zip">ZIP CODE</label>
-			</div>
-
-			<div style="position: absolute; left: 35px; top: 360px;">
-				<input type="email" id="email" name="email" class="inputs" required="required"/> <label for="email">EMAIL ID*</label>
-			</div>
-
-<label style="position:absolute;top:430px;left:20px;">CHOOSE LOCATION</label>
-
-			<div data-select-box
-				style="position: absolute; left: 235px; top: 470px;">
-				<select id="myList" name="loc" required="required">
-					<option value="1">MUMBAI</option>
-					<option value="2">DELHI</option>
-					<option value="3">BANGALORE</option>
-					<option value="4">PUNE</option>
-					<option value="5">CHENNAI</option>
-					<option value="6">DIBRUGARH</option>
-					<option value="7">ROORKEE</option>
-					<option value="8">JABALPUR</option>
-					<option value="9">NOIDA</option>
-					<option value="10">GAYA</option>
-					<option value="11">RAIPUR</option>
-					<option value="12">SILLIGURI</option>
-					<option value="13">ALLAHABAAD</option>
-					<option value="14">HARIDWAR</option>
-					<option value="15">THIRUVANANTHAPURAM</option>
-					<option value="16">ALIGARH</option>
-					<option value="17">VARANASI</option>
-					<option value="18">THANJAVUR</option>
-					<option value="19">PONDICHERRY</option>
-					<option value="20">AGRA</option>
-					<option value="22">WARANGAL</option>
-					<option value="23">TIRUPATI</option>
-					<option value="24">DURGAPUR</option>
-					<option value="25">RAURKELLA</option>
-					<option value="12">KOLHAPUR</option>
-					<option value="12">GOA</option>
-					<option value="12">JAIPUR</option>
-					<option value="12">HAIDERABAD</option>
-					<option value="12">CHANDIGARH</option>
-					<option value="12">AHMEDABAAD</option>
-					<option value="12">SURAT</option>
-					<option value="12">INDORE</option>
-					<option value="12">LUCKNOW</option>
-					<option value="12">AMRITSAR</option>
-					<option value="12">LUDHIANA</option>
-					<option value="12">VISHAKHAPATNAM</option>
-					<option value="12">COIMBATORE</option>
-					<option value="12">NAGPUR</option>
-					<option value="12">VADODARA</option>
-					<option value="12">KOLKATA</option>
-					<option value="12">MADURAI</option>
-					<option value="12">TIRUCHIRAPALLY</option>
-					<option value="12">RAJKOT</option>
-					<option value="12">MORADABAAD</option>
-					<option value="12">MATHURA</option>
-					<option value="12">AMRABATI</option>
-					<option value="12">UDAIPUR</option>
-					<option value="12">MYSORE</option>
-					<option value="12">SALEM</option>
-					<option value="12">BALLARI</option>
-					<option value="12">PATIALA</option>
-					<option value="12">JODHPUR</option>
-					<option value="12">PATNA</option>
-					<option value="12">GWALIOR</option>
-					<option value="12">RANCHI</option>
-					<option value="12">UJJAIN</option>
-					<option value="12">GUWAHATI</option>
-					<option value="12">BHUBANESHWAR</option>
-					<option value="12">JAMSHEDPUR</option>
-					<option value="12">AJMER</option>
-					<option value="12">CUTTACK</option>
-					<option value="12">DEHRADUN</option>
-					<option value="12">KANPUR</option>
-					<option value="12">KOCHI</option>
-					<option value="12">BHOPAL</option>
-
-				</select>
-			</div>
-
-		<div style="position: absolute; left: 35px; top: 540px;">
-				<input type="password" id="pwd" class="inputs" name="pwd" required="required" onchange="CheckPassword(document.reg.pwd)"/> <label for="pwd">CREATE PASSWORD</label>
+	<tr><td colspan="2"><span>SECURITY</span></td></tr>
+	<tr>
+	
+			<td colspan="2"><label for="pwd">CREATE PASSWORD</label><br>
+			<input type="password" id="pwd" class="inputs" name="pwd" required="required" onchange="CheckPassword(document.reg.pwd)" size="72"/> </td>
 			
-			<label id="check" style="position:absolute;left:330px;top:0px;font-size:15px;"></label>
-			<a href="#" class="tooltip"><img src="Images/info.png"><span><img class="callout" src="Images/callout.gif" /><b>Note:</b> Password must be minimum 8 character long and must contain at least one Uppercase letter. </span></a>
-
+	</tr>
+	
+	<tr>
+				<td colspan="2"><label for="cpwd">CONFIRM PASSWORD</label><br>
+				<input type="password" id="cpwd" name="pass" class="inputs" required="required" onchange="matchPass()" size="72"/> </td>
+				
+	</tr>
 			
-			</div>
-			
-		<div style="position: absolute; left: 35px; top: 610px;">
-				<input type="password" id="cpwd" name="pass" class="inputs" required="required" onchange="matchPass()"/> <label for="cpwd">CONFIRM PASSWORD</label>
-			</div>
-			
-            <label style="position:absolute;top:680px;left:20px;">CHOOSE A SECURITY QUESTION ?</label>
-            
-			<div data-select-box
-				style="position: absolute; left: 235px; top: 720px;">
-				<select  name="sqst" required="required">
-					<option >What is Your Favourie Food?</option>
-					<option >Who is Your Favourite Author?</option>
-					<option >What is Your Mother's Maiden Name?</option>
-					<option >What is Your Favourite color?</option>
-					<option >What was the Name of Your Elementary / Primary School?</option>
-					<option >In What City or Town does Your Nearest Sibling Live?</option>
-					<option >What is Youf First Mobile Number?</option>
-			
-</select>
-</div>
+	<tr>
 
-            <div style="position: absolute; left: 35px; top: 790px;">
-				<input type="text" id="sq" name="s_ans" class="inputs" required="required"/> <label for="sq">YOUR SECURITY ANSWER...</label>
-			</div>
-
-            
-			<div style="position: absolute; top: 860px; left: 35px;">
-
-				<input type="checkbox" name="checkboxG4" id="checkboxG4"
+				<td colspan="2"><input type="checkbox" name="checkboxG4" id="checkboxG4"
 					class="css-checkbox" required="required"/><label for="checkboxG4" class="css-label"></label>
-				<p style="margin-left: 90px; font-size: 15px;">
+				<p style="margin-left: 30px;margin-top:-15px; font-size: 12px;">
 					I accept the <a href="Terms&Condition.php" style="color: #e25">Terms and
-						Condition</a> and <br>would like to continue.
-				</p>
-
-			</div>
-			<input type="submit" value="Create My Account" name="sbmt"
-				id="register" disabled>
+						Condition</a> and would like to continue.
+				</p></td>
+				
+	</tr>
+		
+		<tr>
+			<td colspan="2"><input type="submit" value="Create My Account" name="sbmt"
+				id="register" disabled></td>
+				
+		</tr>
+				
+				</table>
 		</form>
 	</div>
 
 	<script src="http://thecodeplayer.com/u/js/jquery.easing.min.js"
 		type="text/javascript"></script>
 
-	<script src="js/TextAnimation.js"></script>
 	<script src="js/custom-select.js"></script>
 
 	<script type="text/javascript"
